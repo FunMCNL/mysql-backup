@@ -5,7 +5,7 @@ on:
      - master
 
 env:
-  IMAGE_NAME: "utils/mysql-backup"
+  IMAGE_NAME: "registry.f365.org/utils/mysql-backup"
 
 jobs:
   report:
