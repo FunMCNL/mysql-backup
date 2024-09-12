@@ -43,7 +43,7 @@ func (e *Executor) Dump(opts DumpOptions) (DumpResults, error) {
 
 	// sourceFilename: file that the uploader looks for when performing the upload
 	// targetFilename: the remote file that is actually uploaded
-	sourceFilename := fmt.Sprintf("db_backup_%s.%s", timepart, compressor.Extension())
+	sourceFilename := fmt.Sprintf("backup.%s", compressor.Extension())
 	targetFilename, err := ProcessFilenamePattern(filenamePattern, now, timepart, compressor.Extension())
 	if err != nil {
 		return results, fmt.Errorf("failed to process filename pattern: %v", err)

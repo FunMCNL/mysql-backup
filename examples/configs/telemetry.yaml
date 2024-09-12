@@ -43,7 +43,7 @@ spec:
       frequency: 1440 # in minutes
       begin: 25 # minutes from initialization
     compression: gzip # defaults to gzip
-    filenamePattern: db_backup_{{ .now }}.{{ .compression }}
+    filenamePattern: backup.{{ .compression }}
     scripts:
       preBackup: /path/to/prescripts/
       postBackup: /path/to/postscripts/

@@ -63,9 +63,9 @@ func TestPrune(t *testing.T) {
 		// and add 30 mins to our "now" time.
 		relativeTime := now.Add(duration).Add(-30 * time.Minute)
 		// convert that into the filename
-		filename := fmt.Sprintf("db_backup_%sZ.gz", relativeTime.Format("2006-01-02T15:04:05"))
+		filename := "backup.gz"
 		filenames = append(filenames, filename)
-		safefilename := fmt.Sprintf("db_backup_%sZ.gz", relativeTime.Format("2006-01-02T15-04-05"))
+		safefilename := "backup.gz"
 		safefilenames = append(safefilenames, safefilename)
 	}
 	tests := []struct {

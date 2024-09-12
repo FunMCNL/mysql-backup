@@ -29,7 +29,7 @@ spec:
     compression: gzip # defaults to gzip
     compact: true # defaults to false
     maxAllowedPacket: 4194304 # defaults to 4194304
-    filenamePattern: db_backup_{{ .now }}.{{ .compression }}
+    filenamePattern: backup.{{ .compression }}
     scripts:
       preBackup: /path/to/prescripts/
       postBackup: /path/to/postscripts/

@@ -7,7 +7,7 @@ fi
 if [ -e ${DUMPFILE} ];
 then
   now=$(date +"%Y-%m-%d-%H_%M")
-  new_name=db_backup-${now}.gz
+  new_name=backup.gz
   old_name=$(basename ${DUMPFILE})
   echo "Renaming backup file from ${old_name} to ${new_name}"
   mv ${DUMPFILE} ${DESTDIR}/${new_name}

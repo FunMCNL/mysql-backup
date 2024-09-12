@@ -5,7 +5,7 @@ on:
     - 'v*'
 
 env:
-  IMAGE_NAME: databack/mysql-backup
+  IMAGE_NAME: utils/mysql-backup
 
 jobs:
   report:
@@ -41,6 +41,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
+          registry: registry.f365.org
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker meta
